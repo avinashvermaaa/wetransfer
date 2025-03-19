@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  distDir: process.env.NODE_ENV === "production" ? "build" : ".next",
   images: {
     unoptimized: true,
     domains: [
@@ -35,4 +33,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// module.exports = nextConfig; // Use this for CommonJS (recommended for Netlify)
+
+export default nextConfig; // Use this only if package.json has "type": "module"
